@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr. Escape GDD</title>
+<link rel="stylesheet" href="projectStyle.css">
+</head>
+
+<body>
+<div class="page">
+
+<canvas id="particles"></canvas>
+
+<div class="container">
+
+<!-- HERO -->
+<header class="hero">
+    <img src="mr.escape/0.png" alt="" class="hero-video">
+
+    <div class="hero-overlay">
+        <h1>Mr. Escape</h1>
+        <p>
+            A fast-paced elemental endless runner focused on survival,
+            quick decision-making, and system-driven gameplay.
+        </p>
+
+        <div class="hero-tags">
+            <span class="status-tag status-pro">Prototype / Unfinished</span>
+            <span class="status-tag status-p">Nov 2019 – Apr 2020</span>
+        </div>
+    </div>
+</header>
+
+<!-- 1. PROJECT OVERVIEW -->
+<section id="info">
+<h2>1. Game Overview</h2>
+<div class="section-container">
+<div class="section-text">
+<p>
+<strong>Mr. Escape</strong> is a fast-paced endless runner where the player
+survives an ever-changing environment by switching characters and bullets
+based on elemental rules.  
+<br><br>
+The game combines automatic forward movement, combat-driven survival,
+and a strategic element-based system that rewards awareness and quick reactions.
+</p>
+</div>
+</div>
+
+<div class="section-carousel carousel" data-carousel>
+    <div class="carousel-track-container" style="width:auto ; height:auto">
+        <div class="carousel-track">
+            <img src="mr.escape/0.png" alt="">
+            <img src="mr.escape/1.png" alt="">
+            <img src="mr.escape/2.png" alt="">
+            <img src="mr.escape/3.png" alt="">
+            <img src="mr.escape/4.png" alt="">
+            <img src="mr.escape/5.png" alt="">
+            <img src="mr.escape/6.png" alt="">
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+        <div class="carousel-dots"></div>
+    </div>
+</div>
+</section>
+
+
+<section id="history">
+
+<h2>2. Project History</h2>
+<div class="section-container">
+<div class="section-text">
+        <p>
+I started this project back in Grade 9. At the time, I had only made a couple of simple games,
+but I was overflowing with 'fake confidence.' I truly believed I knew everything about game development; 
+I was so delusional that I genuinely thought this game idea was going to crush Subway Surfers. 😆
+<br><br>
+
+After working on it for about six months, I left the project behind as my focus shifted to even bigger 'dream projects'
+(which were also left halfway finished 😆😆). Later, due to a hard drive failure, the project was lost.
+<br><br>
+However, yesterday, while searching for old photos, I discovered that some assets of this project had been sitting in a pendrive 
+right in front of me on my desk the whole time, hidden under a different name. 
+After a few fixes, here is the game: a reminder of where I started.</p>
+
+</div>
+
+</div>
+</section>
+
+
+
+<!-- 3. CORE GAMEPLAY PILLARS -->
+<section id="pillars">
+<h2>3. Core Gameplay Pillars</h2>
+<div class="section-container">
+<div class="section-text">
+
+<h3>Endless Survival</h3>
+<ul>
+<li>The game continues indefinitely until the player fails</li>
+<li>Difficulty increases naturally over time</li>
+</ul>
+
+<h3>Element Awareness</h3>
+<ul>
+<li>Correct character and bullet selection is mandatory</li>
+<li>Wrong choices lead to continuous damage or ineffective combat</li>
+</ul>
+
+<h3>Fast Decision Making</h3>
+<ul>
+<li>Quick character and bullet switching under pressure</li>
+<li>Constant environmental and enemy threats</li>
+</ul>
+
+<h3>System-Driven Gameplay</h3>
+<ul>
+<li>All mechanics follow strict, readable rules</li>
+<li>Player, enemies, and environments interact through systems</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<!-- 4. OBJECTIVE & FAIL CONDITIONS -->
+<section id="objectives">
+<h2>4. Core Objective & Fail Conditions</h2>
+<div class="section-container">
+<div class="section-text">
+
+<h3>Primary Objective</h3>
+<p>Survive for as long as possible while completing missions during the run.</p>
+
+<h3>Fail Conditions</h3>
+<ul>
+<li>Player health reaches zero</li>
+<li>Player falls off the platform</li>
+<li>Player is killed by enemies</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<!-- 5. PLAYER MECHANICS -->
+<section id="player">
+<h2>5. Player Mechanics</h2>
+<div class="section-container">
+<div class="section-text">
+
+<h3>Movement</h3>
+<ul>
+<li>Automatic forward movement</li>
+<li>Manual left/right movement using mobile accelerometer</li>
+<li>Jump to avoid obstacles and hazards</li>
+</ul>
+
+<h3>Character Switching (Element System)</h3>
+<p>
+The player must switch characters based on the current environment
+to avoid continuous damage.
+</p>
+
+<p><strong>Switching Input (Left Joystick):</strong></p>
+<ul>
+<li>Top Right → Fire</li>
+<li>Top Left → Water</li>
+<li>Bottom Right → Holy (Pink)</li>
+<li>Bottom Left → Poison (Green)</li>
+</ul>
+
+<h3>Environment Interaction Rule</h3>
+<ul>
+<li>Wrong character → continuous damage</li>
+<li>Correct character → safe movement</li>
+</ul>
+
+<h3>Special Character – King Character</h3>
+<ul>
+<li>Can run on any platform without taking damage</li>
+<li>Activate only for a limited duration</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<!-- 6. COMBAT SYSTEM -->
+<section id="combat">
+<h2>6. Combat System</h2>
+<div class="section-container">
+<div class="section-text">
+
+<h3>Weapons</h3>
+<ul>
+<li>Bullets</li>
+<li>Lasers</li>
+<li>Bombs</li>
+</ul>
+
+<h3>Bullet Switching (Right Joystick)</h3>
+<ul>
+<li>Top Right → Fire Bullet</li>
+<li>Top Left → Water Bullet</li>
+<li>Bottom Right → Holy Bullet</li>
+<li>Bottom Left → Poison Bullet</li>
+</ul>
+
+<h3>Shooting Mechanics</h3>
+<ul>
+<li>Fire button triggers attack</li>
+<li>Automatic targeting of nearest enemy</li>
+<li>Player can shoot while moving</li>
+</ul>
+
+<h3>Element-Based Damage Rules</h3>
+<ul>
+<li>Fire enemies cannot be damaged by fire bullets</li>
+<li>Water enemies cannot be damaged by water bullets</li>
+<li>Poision enemies cannot be damaged by Poision bullets</li>
+<li>Holy enemies cannot be damaged by Holy bullets</li>
+<li>Correct bullet selection is mandatory</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<!-- 7. ENEMIES & AI -->
+<section id="enemies">
+<h2>7. Enemies & AI</h2>
+<div class="section-container">
+<div class="section-text">
+
+<h3>Enemy Types</h3>
+<ul>
+<li>Stationary turrets</li>
+<li>Laser shooters</li>
+<li>Projectile shooters</li>
+<li>Moving enemies</li>
+</ul>
+
+<h3>Enemy Attacks</h3>
+<ul>
+<li>Bullets</li>
+<li>Lasers</li>
+<li>Bombs</li>
+<li>Projectiles</li>
+</ul>
+
+<h3>AI Complexity</h3>
+<ul>
+<li>Simple, readable attack patterns</li>
+<li>Difficulty increases over time</li>
+<li>Higher spawn rates and faster attacks</li>
+<li>Multiple enemy types combined</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<!-- 8. ENVIRONMENT SYSTEM -->
+<section id="environment">
+<h2>8. Environment System</h2>
+<div class="section-container">
+<div class="section-text">
+
+<h3>Environment Types</h3>
+<ul>
+<li>Fire / Lava</li>
+<li>Water</li>
+<li>Poison</li>
+<li>Holy</li>
+</ul>
+
+<h3>Rules</h3>
+<ul>
+<li>Incorrect character causes continuous damage</li>
+<li>Environments force constant decision-making</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<!-- 9. LEVEL GENERATION -->
+<section id="generation">
+<h2>9. Level Generation</h2>
+<div class="section-container">
+<div class="section-text">
+<ul>
+<li>Fully procedural endless level generation</li>
+<li>Platform segments generated dynamically</li>
+<li>Difficulty increases through time survived</li>
+<li>More frequent environment switching</li>
+<li>Higher enemy density</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- 10. PROGRESSION & META -->
+<section id="progression">
+<h2>10. Progression & Meta Systems</h2>
+<div class="section-container">
+<div class="section-text">
+
+<h3>Progression</h3>
+<ul>
+<li>Mission-based progression</li>
+<li>Missions completed during runs</li>
+<li>Difficulty scales with survival time</li>
+</ul>
+
+<h3>Unlockables</h3>
+<ul>
+<li>Character skins</li>
+<li>Bullet skins</li>
+<li>Laser skins</li>
+<li>Bomb skins</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<!-- 11. ECONOMY & MONETIZATION -->
+<section id="monetization">
+<h2>11. Economy & Monetization</h2>
+<div class="section-container">
+<div class="section-text">
+
+<h3>Currencies</h3>
+<ul>
+<li>Multiple in-game currencies</li>
+</ul>
+
+<h3>Monetization Strategy</h3>
+<ul>
+<li>Cosmetic-focused monetization</li>
+<li>No gameplay advantages</li>
+<li>Fair and skill-based progression</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+
+
+<!-- 13. TECHNICAL NOTES -->
+<section id="technical">
+<h2>13. Technical Notes</h2>
+<div class="section-container">
+<div class="section-text">
+
+<p>
+Mr. Escape was developed during my early learning phase in Unity, with a primary focus on
+understanding and implementing gameplay systems rather than achieving visual polish.
+ As a result, several aspects including graphics quality, visual effects,
+performance optimization, and overall architecture still have significant room for improvement.
+These limitations are acknowledged as part of the learning process, and the project serves
+as a foundational step toward building more optimized, polished, and scalable game systems
+in future iterations.
+</p>
+
+</div>
+</div>
+</section>
+
+
+
+<!-- 15. CONCLUSION -->
+<section id="summary">
+<h2>14. Conclusion</h2>
+<div class="section-container">
+<div class="section-text">
+<p>
+<strong>Mr. Escape</strong> is a system-driven endless runner that prioritizes
+mechanical experimentation and gameplay logic over visual polish.
+<br><br>
+Despite being an early-stage learning project, it demonstrates strong
+problem-solving skills, creative system design, and the ability to handle
+complex mechanics such as element-based combat, procedural environments,
+and real-time character switching.
+</p>
+</div>
+</div>
+</section>
+
+<div class="section-nav" id="sectionNav"></div>
+<div id="backToTop">↑ Top</div>
+
+<script src="projectJava.js"></script>
+
+</div>
+</div>
+</body>
+</html>
