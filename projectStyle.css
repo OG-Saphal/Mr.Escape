@@ -223,7 +223,7 @@ td { background:#020617; }
 /* Mobile */
 @media(max-width:768px){ section { padding:25px; } .section-nav { display:none; } }
 
-.hero-tags { position:absolute; bottom:-50px; left:30%; display:flex; gap:12px; align-items:center; width:100%; z-index:3; }
+.hero-tags { position:absolute; bottom:-50px; left:10%; display:flex; gap:12px; align-items:center; width:100%; z-index:3; }
 /* Status Tags */
 /* Base Style - Standard size for Desktop */
 .status-tag { 
@@ -396,4 +396,5 @@ td { background:#020617; }
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
   hyphens: auto; /* Optional: handles long words at the end of lines */
+
 }
